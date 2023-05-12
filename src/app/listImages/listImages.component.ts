@@ -4,10 +4,10 @@ import { FormBuilder } from '@angular/forms';
 
 
 @Component({
-  templateUrl: './searchImages.component.html',
-  styleUrls: ['./searchImages.component.scss']
+  templateUrl: './listImages.component.html',
+  styleUrls: ['./listImages.component.scss']
 })
-export class SearchImagesComponent implements OnInit {
+export class ListImagesComponent implements OnInit {
   data: any = [];
 
   public filterImages: boolean = false;

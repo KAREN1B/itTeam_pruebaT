@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './components/shared-module.module';
-import { SearchImagesComponent } from './searchImages/searchImages.component';
+import { ListImagesComponent } from './listImages/listImages.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './users/users.component';
 import { FilterImagesComponent } from './filterImages/filterImages.component';
@@ -12,7 +12,7 @@ import { FilterImagesComponent } from './filterImages/filterImages.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SearchImagesComponent,
+    ListImagesComponent,
     FilterImagesComponent
   ],
   imports: [

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SearchImagesComponent } from './searchImages.component';
+import { ListImagesComponent } from './listImages.component';
 
 
 
 
 @NgModule({
   declarations: [
-    SearchImagesComponent
+    ListImagesComponent
   ],
   imports: [
     CommonModule,
@@ -17,4 +17,4 @@ import { SearchImagesComponent } from './searchImages.component';
     ReactiveFormsModule, */
   ]
 })
-export class SearchImagesModule { }
+export class ListImagesModule { }

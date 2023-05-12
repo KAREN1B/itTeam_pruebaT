@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SearchImagesComponent } from './searchImages/searchImages.component';
+import { ListImagesComponent } from './listImages/listImages.component';
 import { FilterImagesComponent } from './filterImages/filterImages.component';
 
 const routes: Routes = [
   {
-    path: "SearchImages",
-    component: SearchImagesComponent
+    path: "ListImages",
+    component: ListImagesComponent
   },
   {
     path: " ",
-    component: SearchImagesComponent
+    component: ListImagesComponent
   },
   {
     path: "FilterImages",
