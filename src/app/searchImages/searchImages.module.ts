@@ -11,6 +11,10 @@ import { SearchImagesComponent } from './searchImages.component';
   ],
   imports: [
     CommonModule,
+/*     BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule, */
   ]
 })
 export class SearchImagesModule { }

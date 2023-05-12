@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InfoImageService } from '../services/infoImage.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 
 
 @Component({
@@ -12,19 +12,26 @@ export class SearchImagesComponent implements OnInit {
 
   public filterImages: boolean = false;
   public listImages: boolean = false;
-/*   public myForm: FormGroup; */
+/*   public myForm: FormGroup | any; */
 
 
   constructor(
     private  infoImageService:InfoImageService,
+   /*  private fb: FormBuilder, */
   ) { }
 
   ngOnInit(): void {
     this.getInfoimageList();
-    /* this.iniciliteForm */
+  /*   this.initialForm(); */
   }
 
-  public getInfoimageList( ) {
+/*   public initialForm(): void {
+    this.myForm = this.fb.group({
+      name: new FormControl(''),
+    });
+  } */
+
+/*   public getInfoimageList( ) {
     this.infoImageService.getinfoImage().subscribe( data => {
       data.hits.map((hit: any) => {
         this.data= hit;
@@ -32,33 +39,25 @@ export class SearchImagesComponent implements OnInit {
       })
     } )
 
+  } */
+
+ public getInfoimageList( ) {
+  /* this.data.hits, */
+    this.infoImageService.getinfoImage().subscribe( data => {
+      this.data = data.hits;
+      console.log('console.log',this.data)
+    } )
+
   }
 
-  public showListImages(): void {
-    this.listImages = !this.listImages
-  }
 
-  public showFilterImages(): void {
-    this.filterImages = !this.filterImages
-  }
-
-/*   private iniciliteForm(): void {
-    this.myForm = this.fb.group({
-      name: new FormControl(),
-      categoria: new FormControl(0),
-    });
-  }
-
-  private filterImage(name: string, categoria: string): void {
-    this.infoImageService.getImageFilter(name,categoria).subscribe(
-      (result) => {
-        this.myForm.controls.name.setValue(name,categoria);
+ /*  public filterImagesName(code: string): void {
+    this.infoImageService.getImageFilter(code).subscribe((result) => {
+      console.log(result)
+        this.myForm.controls.name.setValue(code);
       }, (error) => {
+        error({ type: 'Error', msg: error?.error?.message, title: error?.error?.name });
 
-
-      }); */
-  }
-
-
-
-
+      });
+  } */
+}

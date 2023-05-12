@@ -1,0 +1,50 @@
+.wrapper {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
+}
+.color-round {
+  background: linear-gradient(100deg,#a390af 10%, #bcc0bf 50%,);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 1em;
+  font-size: 1.05rem;
+  opacity: 25px;
+}
+.button {
+  background: linear-gradient(90deg, #368d74 0%,#a544ff 100%);
+  border: none;
+  padding: 0.8rem 1.5rem 0.7rem 1.5rem;
+  display: flex;
+  border-radius: 4rem;
+  text-decoration: none;
+  line-height: 1em;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+}
+.search {
+  position: relative;
+  margin: 1rem 0;
+  input {
+    width: 100%;
+  }
+  .button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0 10px 10px 0;
+    padding: 0.75rem 1.25rem;
+  }
+}
+
